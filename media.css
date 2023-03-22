@@ -1,0 +1,112 @@
+@media screen and (max-width: 700px) {
+
+:root{
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --font-size: 1.2rem;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: gray;
+    display: block;
+}
+
+.container{
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-background{
+    background: url(/img/bg-main-mobile.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.cards-front{
+    transform: translate(120px, 350px);
+    background: url(/img/bg-card-front.png) no-repeat center;
+    border-radius: 10px;
+    height: 220px;
+    z-index: 1;
+}
+
+.logo{
+    width: 70px;
+}
+
+.content{
+    padding: 1rem;
+}
+
+.cards-back{
+    transform: translate(60px, -30px);
+}
+
+.number, .name, .exp-date{  
+    background: transparent;
+    border: none;
+}
+
+.name-exp{
+    margin-top: 1rem;
+}
+
+.number{
+    max-width: 360px;
+    margin-top: 4rem;
+}
+
+.number[value]{
+    color: var(--white);
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+}
+
+.name[value]{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.name-exp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* RIGHT CONTENT */
+
+.right-content{
+    margin: 10rem 0 0 0;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+#cvc{
+    width: 100%;
+}
+
+.right-exp-cvc{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* THANK YU */
+
+.thankyou.active{
+    margin: 10rem 0;
+}
+
+}

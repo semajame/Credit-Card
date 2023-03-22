@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINKS -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+    <!-- TITLE -->
+    <title>Credit Card</title>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section class="left-background">
+                <div class="cards-front">
+                    <div class="content">
+                        <img src="/img/card-logo.svg" alt="logo" class="logo
+                        ">
+
+                        <form action="/">
+                            <input type="text" readonly class="number" placeholder="0000 0000 0000 0000" id="leftnum">
+
+                            <div class="name-exp">
+                                <input type="text" readonly class="name"
+                                placeholder="Jane Appleseed" id="leftname">
+
+                                <div class="left-exp-flex">
+                                    <input type="text"  readonly class="exp-date"
+                                    placeholder="00" id="left-exp-month">
+
+                                    <span class="slash">/</span>
+                                    <input type="text"  readonly class="exp-date"
+                                    placeholder="00" id="left-exp-year">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <img src="/img/bg-card-back.png" alt="bg-card-back" class="cards-back">
+
+            </section>
+            
+            <section class="right-content" id="right-content">
+                <form action="/" id="form">
+                    <div class="right-name">
+                        <h1>
+                            Cardholder Name
+                        </h1>
+
+                        <input type="text" placeholder="e.g Jane Applseed" id="cardholder" maxlength="20" onkeypress="return event.charCode >= 65 || event.charCode == 32">
+
+                        <p id="error-name"> Must not be empty</p>
+                    </div>
+
+                    <div class="right-number">
+                        <h2>
+                            Card Number
+                        </h2>
+
+                        <input type="text"
+                        placeholder="e.g 1234 5678 0123 0000" id="cardnumber" maxlength="19" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+
+                        <p id="error"> Must not be empty</p>
+
+                        <p id="error2"> Must be 19 numbers</p>
+
+                    </div>
+
+                    <div class="right-exp-cvc">
+                        <div class="exp-flex">
+                            <h2>
+                                Exp. Date (MM/YY)
+                            </h2>
+                            
+                            <div class="mmyy">
+                                <input type="text"
+                                placeholder="MM" class="exp-m" id="exp-m" maxlength="2" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+
+                                <input type="text" placeholder="YY" class="exp-y" id="exp-y" maxlength="2" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+                            </div>
+
+                            <p id="exp-error"> Must not be empty</p>
+
+                            <p id="exp-error2"> Must not be less than 1</p>
+
+                        </div>
+
+                        <div class="cvc">
+                            <h2>Cvc</h2>
+
+                            <input type="text" placeholder="e.g 123" id="cvc" maxlength="3" onkeypress="return event.charCode >= 32 && event.charCode <= 57">
+
+                            <p id="cvc-error"> Must not be empty</p>
+
+                            <p id="cvc-error2"> Must be 3 numbers</p>
+                        </div>
+                    </div>
+                </form>
+
+                <button id="confirm">
+                    Confirm
+                </button>
+            </section>
+
+            <section>
+                <div class="thankyou">
+                    <img src="/img/icon-complete.svg" alt="icon-complete">
+    
+                    <h2>Thank You</h2>
+    
+                    <p>We've added your card details</p>
+    
+                    <button id="confirm2" type="submit">
+                        Confirm
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+
+<script src="/script.js"></script>
+</html>
